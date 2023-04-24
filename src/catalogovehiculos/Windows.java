@@ -523,8 +523,8 @@ public class Windows extends javax.swing.JFrame {
              jTextArea1.setText("No hay cliente registrado con ese NIF");
                jTextField2.setText("");
            } else {
-          jTextArea1.setText("" + alquiler.buscarCliente(nif).getNombre());
-          jTextField2.setText("");
+          jTextArea1.setText("" + alquiler.buscarCliente(nif).getNombre() + "\n" + alquiler.buscarCliente(nif).getNif());
+          jTextField12.setText("");
          }
     }//GEN-LAST:event_jButton9ActionPerformed
 

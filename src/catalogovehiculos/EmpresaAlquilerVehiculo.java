@@ -155,9 +155,5 @@ public class EmpresaAlquilerVehiculo {
           return resultado;
       }
       
-    @Override
-       public String toString(){
-    return "El titular de la cuenta es: " +  " y tiene " + " pesos en la cuenta ";
-    }
 }
       
