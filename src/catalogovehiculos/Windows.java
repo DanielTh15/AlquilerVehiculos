@@ -9,16 +9,17 @@ package catalogovehiculos;
  * @author danie
  */
 public class Windows extends javax.swing.JFrame {
- // Vehiculo vehiculo1 = new Vehiculo();
-  
-  EmpresaAlquilerVehiculo alquiler = new EmpresaAlquilerVehiculo();
+    // Vehiculo vehiculo1 = new Vehiculo();
+
+    EmpresaAlquilerVehiculo alquiler = new EmpresaAlquilerVehiculo();
+
     /**
      * Creates new form Windows
      */
     public Windows() {
         initComponents();
     }
-  
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,6 +63,9 @@ public class Windows extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
@@ -187,7 +191,7 @@ public class Windows extends javax.swing.JFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -246,6 +250,16 @@ public class Windows extends javax.swing.JFrame {
             }
         });
 
+        jButton11.setText("Buscar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
+        jLabel16.setText("buscar vehículos");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -267,22 +281,33 @@ public class Windows extends javax.swing.JFrame {
                     .addComponent(jTextField8))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addComponent(jButton5)
-                .addGap(73, 73, 73)
-                .addComponent(jButton6)
-                .addGap(27, 27, 27))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton4)
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton5)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton6)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton11))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel5)))
+                .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel5))
+                        .addGap(83, 83, 83)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel16)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(176, 176, 176)
+                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,14 +335,19 @@ public class Windows extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addGap(24, 24, 24)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
+                    .addComponent(jButton4)
                     .addComponent(jButton5)
-                    .addComponent(jButton4))
-                .addGap(50, 50, 50))
+                    .addComponent(jButton6)
+                    .addComponent(jButton11))
+                .addGap(40, 40, 40))
         );
 
         jTabbedPane1.addTab("Registrar Vehiculo", jPanel2);
@@ -413,7 +443,7 @@ public class Windows extends javax.swing.JFrame {
                     .addComponent(jButton7))
                 .addGap(27, 27, 27)
                 .addComponent(jButton10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -441,11 +471,10 @@ public class Windows extends javax.swing.JFrame {
         String nombre = jTextField2.getText();
         String apellidos = jTextField3.getText();
         cliente = new Cliente(nif, nombre, apellidos);
-        
-        
+
         alquiler.registrarCliente(cliente);
         limpiar();
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -471,7 +500,7 @@ public class Windows extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         Vehiculo vehiculo = new Vehiculo();
-        
+
         String matricula = jTextField4.getText();
         vehiculo.setMatricula(matricula);
         String marca = jTextField5.getText();
@@ -482,30 +511,30 @@ public class Windows extends javax.swing.JFrame {
         vehiculo.setColor(color);
         Double tarifa = Double.parseDouble(jTextField8.getText());
         vehiculo.setTarifa(tarifa);
-        
+
         jTextField4.setText("");
         jTextField5.setText("");
         jTextField6.setText("");
         jTextField7.setText("");
         jTextField8.setText("");
-       
+
         alquiler.registrarVehiculo(vehiculo);
-        
-      
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        
+
         String nombreC = jTextField9.getText();
         String matriculaV = jTextField10.getText();
         int numeroDias = Integer.parseInt(jTextField11.getText());
         alquiler.alquilarVehiculo(matriculaV, nombreC, numeroDias);
-   
+
         jTextField9.setText("");
         jTextField10.setText("");
         jTextField11.setText("");
-        
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -519,13 +548,13 @@ public class Windows extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         String nif = jTextField12.getText();
-         if(alquiler.buscarCliente(nif) == null){
-             jTextArea1.setText("No hay cliente registrado con ese NIF");
-               jTextField2.setText("");
-           } else {
-          jTextArea1.setText("" + alquiler.buscarCliente(nif).getNombre() + "\n" + alquiler.buscarCliente(nif).getNif());
-          jTextField12.setText("");
-         }
+        if (alquiler.buscarCliente(nif) == null) {
+            jTextArea1.setText("No hay cliente registrado con ese NIF");
+            jTextField2.setText("");
+        } else {
+            jTextArea1.setText("" + alquiler.buscarCliente(nif).getNombre() + "\n" + alquiler.buscarCliente(nif).getNif());
+            jTextField12.setText("");
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -535,12 +564,28 @@ public class Windows extends javax.swing.JFrame {
         jTextArea3.setText("Vehículo: " + matricula + " recibido");
         jTextField10.setText("");
     }//GEN-LAST:event_jButton10ActionPerformed
-         public void limpiar(){
-         jTextField1.setText("");
-         jTextField2.setText("");
-         jTextField3.setText("");
-         
-         } 
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        String matricula = this.jTextField13.getText();
+        if (alquiler.buscarVehiculo(matricula) == null) {
+            this.jTextArea2.setText("No hay registro de matrícula con la referencia: " + matricula);
+            this.jTextField13.setText("");
+        } else {
+            this.jTextArea2.setText("" + alquiler.buscarVehiculo(matricula).getMatricula() + "\n"
+                    + alquiler.buscarVehiculo(matricula).getMarca());
+            this.jTextField13.setText("");
+        }
+
+
+    }//GEN-LAST:event_jButton11ActionPerformed
+    public void limpiar() {
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -579,6 +624,7 @@ public class Windows extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -594,6 +640,7 @@ public class Windows extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -611,11 +658,12 @@ public class Windows extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
+    public javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
